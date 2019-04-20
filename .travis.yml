@@ -1,0 +1,16 @@
+language: python
+dist: xenial
+
+python:
+  - '3.6'
+  - '3.7'
+
+env:
+  global:
+    - PIPENV_IGNORE_VIRTUALENVS=1
+
+install:
+  - 'pip install pipenv'
+  - 'pipenv install --dev'
+
+script: 'pipenv run pytest'
