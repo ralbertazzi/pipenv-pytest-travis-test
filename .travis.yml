@@ -10,13 +10,13 @@ env:
     - PIPENV_IGNORE_VIRTUALENVS=1
 
 install:
-  - yarn add danger
-  - 'pip install pipenv'
-  - 'pipenv install --dev'
+  - yarn add danger       # install danger-js
+  - pip install pipenv    # install pipenv
+  - pipenv install --dev  # install all project dependencies (including dev)
 
 before_script:
   - yarn danger ci
 
 script:
   # - 'pipenv run black --check life tests'
-  - 'pipenv run pytest'
+  - pipenv run pytest
