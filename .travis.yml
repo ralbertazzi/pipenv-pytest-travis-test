@@ -18,5 +18,5 @@ before_script:
   - yarn danger ci
 
 script:
-  # - 'pipenv run black --check life tests'
+  - pipenv run black --check life tests
   - pipenv run pytest
