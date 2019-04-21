@@ -10,6 +10,7 @@ env:
     - PIPENV_IGNORE_VIRTUALENVS=1
 
 install:
+  - yarn add danger
   - 'pip install pipenv'
   - 'pipenv install --dev'
 
