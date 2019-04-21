@@ -13,6 +13,9 @@ install:
   - 'pip install pipenv'
   - 'pipenv install --dev'
 
+before_script:
+  - yarn danger ci
+
 script:
-  - 'pipenv run black --check life tests'
+  # - 'pipenv run black --check life tests'
   - 'pipenv run pytest'
