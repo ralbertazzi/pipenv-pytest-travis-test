@@ -10,7 +10,7 @@ env:
     - PIPENV_IGNORE_VIRTUALENVS=1
 
 install:
-  - yarn add danger       # install danger-js
+  - yarn global add danger       # install danger-js
   - pip install pipenv    # install pipenv
   - pipenv install --dev  # install all project dependencies (including dev)
 
